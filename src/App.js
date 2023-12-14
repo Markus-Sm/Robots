@@ -29,7 +29,7 @@ class App extends Component {
 	}
 
 	render() {
-		console.log('render')
+		
 		const filteredMonsters = this.state.monsters.filter(monster => {
 			return monster.name.toLocaleLowerCase().includes(this.state.searchField)
 		})
