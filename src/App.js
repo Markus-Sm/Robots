@@ -20,26 +20,29 @@ const App = () => {
 		setSearchField(searchFieldsString)
 	}
 
+	const onStringChange = (event) => {
+		setStringField(event.target.value);
+	}
+
 	const filteredMonsters = monsters.filter(monster => {
 		return monster.name.toLocaleLowerCase().includes(searchField)
 	})
 
 	return (
-		console.log();
 		<div className='App'>
 			<h1 className='app-title'>Monsters Rolodex</h1>
 
-			{/* <SearchBox className='monsters-search-box' 
-			onChangeHandler={onSearchChange} placeholder='search monsters' /> */}
-
 			<SearchBox className='monsters-search-box' 
 			onChangeHandler={onSearchChange} placeholder='search monsters' />
+
+			<SearchBox 
+			onChangeHandler={onStringChange} placeholder='set string' />
 
 			<CardList monsters={filteredMonsters} />
 		</div>
 	)
 }
-
+console.log();
 // class App extends Component {
 // 	constructor() {
 // 		super()
