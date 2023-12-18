@@ -44,7 +44,6 @@ const App = () => {
 	)
 }
 
-//
 // class App extends Component {
 // 	constructor() {
 // 		super()
