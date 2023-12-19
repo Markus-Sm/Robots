@@ -44,7 +44,7 @@ const App = () => {
 	)
 }
 
-console.log();
+
 
 // class App extends Component {
 // 	constructor() {
